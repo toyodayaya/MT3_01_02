@@ -74,8 +74,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	//================================================================
 	// 変数の宣言と初期化
 	//================================================================
-
-	Vector3 cameraPosition{ 0.0f,0.0f,0.0f };
 	const int kWindowWidth = 1280;
 	const int kWindowHeight = 720;
 
@@ -122,7 +120,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		ImGui::Begin("Window");
 		ImGui::DragFloat3("cameraTranslate", &cameraTranslate.x, 0.01f);
 		ImGui::DragFloat3("cameraRotate", &cameraRotate.x, 0.01f);
-		ImGui::DragFloat3("cameraPosition", &cameraPosition.x, 0.01f);
 		ImGui::End();
 
 		DrawGrid(worldViewProjectionMatrix, viewportMatrix);
